@@ -22,30 +22,30 @@ class ProductsScreen extends StatelessWidget {
         listener: (context, state) {});
   }
 
-  Widget productsBuilder(ShopHomeModel model) => SingleChildScrollView(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          CarouselSlider(
-            items: model.data!.banners
-                .map((e) => Image(
-                      image: NetworkImage(e.image),
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                    ))
-                .toList(),
-            options: CarouselOptions(
-              height: 200,
-              viewportFraction: 1.0,
-              enlargeCenterPage: false,
-              initialPage: 0,
-              enableInfiniteScroll: true,
-              reverse: false,
-              autoPlay: true,
-              autoPlayInterval: Duration(seconds: 3),
-              autoPlayAnimationDuration: Duration(seconds: 1),
-              autoPlayCurve: Curves.fastOutSlowIn,
-              scrollDirection: Axis.horizontal,
-            ),
-          ),
+  // Widget productsBuilder(ShopHomeModel model) => SingleChildScrollView(
+  //       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+  //         CarouselSlider(
+  //           items: model.data!.banners
+  //               .map((e) => Image(
+  //                     image: NetworkImage(e.image),
+  //                     fit: BoxFit.cover,
+  //                     width: double.infinity,
+  //                   ))
+  //               .toList(),
+  //           options: CarouselOptions(
+  //             height: 200,
+  //             viewportFraction: 1.0,
+  //             enlargeCenterPage: false,
+  //             initialPage: 0,
+  //             enableInfiniteScroll: true,
+  //             reverse: false,
+  //             autoPlay: true,
+  //             autoPlayInterval: Duration(seconds: 3),
+  //             autoPlayAnimationDuration: Duration(seconds: 1),
+  //             autoPlayCurve: Curves.fastOutSlowIn,
+  //             scrollDirection: Axis.horizontal,
+  //           ),
+  //         ),
           SizedBox(
             height: 10.0,
           ),
